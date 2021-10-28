@@ -153,6 +153,10 @@ a {
   fill: white;
 }
 
+.icon--red {
+  fill: red;
+}
+
 .icon--small {
   width: 30px;
   height: 30px;
@@ -503,4 +507,53 @@ a {
   .callout__para {
     text-align: left;
   }
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  transform: all 0.3s;
+  opacity: 0;
+}
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  overflow: visible;
+  opacity: 1;
+}
+/* Blocks */
+
+.block {
+  padding: 6rem 2rem;
+  border: 2px solid red;
+}
+.block__heading {
+  margin-top: 0;
+}
+.block--dark {
+  background-color: #000;
+  color: #7b858b;
+}
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
