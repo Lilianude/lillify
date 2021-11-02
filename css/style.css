@@ -45,6 +45,7 @@ h3 {
 
 p {
   margin-top: 0;
+  font-size: 1.8rem;
 }
 @media screen and (min-wdith: 1024px) {
   body {
@@ -186,6 +187,7 @@ a {
   font-weight: 600;
   margin: 5rem 0rem;
   padding: 2rem 3rem;
+  outline: 0;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -232,6 +234,12 @@ a {
   width: 100%;
   display: inline-block;
 }
+.btn .icon {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1 rem;
+  vertical-align: middle;
+}
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -260,14 +268,14 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 2rem;
 }
 .input-group .btn {
-  margin: 4px;
+  margin: 2px;
 }
 @media screen and (min-width: 1024px) {
   .input {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -652,4 +660,25 @@ a {
   }
 }
 
-/* Images */
+/* Domain Block */
+.block-domain .input-group {
+  border: 0;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  margin: 4rem auto;
+  max-width: 670px; /* the input filed will not grow more tham 670px in width*/
+}
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-weight: 600;
+  font-size: 2rem;
+  justify-items: center;
+  max-width: 700px; /* the list will not grow more than 70px in width*/
+}
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0 auto;
+  }
+}
