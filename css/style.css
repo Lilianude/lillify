@@ -46,6 +46,7 @@ h3 {
 p {
   margin-top: 0;
   font-size: 1.8rem;
+  line-height: 2.9rem;
 }
 @media screen and (min-wdith: 1024px) {
   body {
@@ -63,7 +64,8 @@ p {
 }
 /* Links */
 .link-arrow {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--color-accent);
 }
@@ -707,4 +709,24 @@ a {
 .block-plans {
   max-width: 500px;
   margin: 0 auto;
+}
+/* Feature Block*/
+.feature {
+  gap: 4rem 2rem;
+  margin: 3rem 0;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+.feature__image {
+  width: 100%;
+}
+.feature:first-of-type {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
