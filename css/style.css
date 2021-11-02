@@ -295,16 +295,17 @@ a {
   color: dimgray;
 }
 
-.card--primary,
-.card__header {
+.card--primary .card__header {
   background: var(--color-primary);
   color: #fff;
 }
 
-.card--secondary,
-.card__header {
+.card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
+}
+.card--primary .badge--primary {
+  background: #126de4;
 }
 
 .card--secondary .badge--secondary {
@@ -323,22 +324,25 @@ a {
   font-size: 6rem;
 }
 .plan__billing-cycle {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-weight: 300;
   opacity: 0.8;
   margin-right: 1rem;
 }
 
 .plan__description {
-  font-weight: 300;
+  display: block;
   font-size: 1.8rem;
-  opacity: 0.8;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-top: 5px;
-  display: block;
+  opacity: 0.8;
 }
 .plan .list__item {
   line-height: 1.2rem;
+}
+.plan--popular {
+  transform: scale(1.1);
 }
 .plan--popular .card__header {
   position: relative;
@@ -351,7 +355,18 @@ a {
   top: -6%;
   right: 5%;
 }
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
 @media screen and (min-width: 1024px) {
+  .plan {
+    transition: transform 0.2s ease-out;
+  }
   .plan__name {
     font-size: 1.4rem;
   }
@@ -667,7 +682,7 @@ a {
   margin: 4rem auto;
   max-width: 670px; /* the input filed will not grow more tham 670px in width*/
 }
-.block-domain__prices {
+.grid__prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 6rem);
@@ -681,4 +696,15 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin: 0 auto;
   }
+}
+
+/* PLANS BLOCK*/
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+  justify-content: center;
+}
+.block-plans {
+  max-width: 500px;
+  margin: 0 auto;
 }
