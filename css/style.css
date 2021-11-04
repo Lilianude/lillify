@@ -595,6 +595,7 @@ a {
 }
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) +4rem);
@@ -732,7 +733,8 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .feature:nth-of-type(even) .feature__content {
+  .feature:nth-of-type(even),
+  .feature__content {
     order: 2;
   }
 }
@@ -747,7 +749,7 @@ a {
   }
 
   .block-showcase__image {
-    justify-self: end;
+    justify-self: end; /* aligns the image to the right side or end of the column */
   }
 
   .block-showcase__image > img {
@@ -755,3 +757,5 @@ a {
     max-width: 700px;
   }
 }
+
+/* Testimonials Block */
