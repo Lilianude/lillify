@@ -1,3 +1,4 @@
+/*Go to ogp.me the official website open graph protocol*/
 ::selection {
   background: var(--color-primary);
   color: #fff;
@@ -26,7 +27,7 @@ html {
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
-  font: size 2.4rem;
+  font-size: 2.4rem;
 }
 h1,
 h2,
@@ -193,8 +194,8 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 5rem 0rem;
-  padding: 2rem 3rem;
+  margin: 1rem 0rem;
+  padding: 2rem 4vw;
   outline: 0;
   text-transform: uppercase;
   text-align: center;
@@ -245,7 +246,7 @@ a {
 .btn .icon {
   height: 2rem;
   width: 2rem;
-  margin-right: 1 rem;
+  margin-right: 1rem;
   vertical-align: middle;
 }
 @media screen and (min-width: 1024px) {
@@ -277,6 +278,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 2px;
@@ -346,9 +348,7 @@ a {
   margin-top: 5px;
   opacity: 0.8;
 }
-.plan .list__item {
-  line-height: 1.2rem;
-}
+
 .plan--popular {
   transform: scale(1.1);
 }
@@ -456,8 +456,9 @@ a {
 /* Grids section */
 .grid {
   display: grid;
+  align-items: center;
+  justify-items: center;
 }
-
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
@@ -506,40 +507,35 @@ a {
 .callout--primary {
   background: var(--color-primary);
   color: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  max-width: 100vw;
+  margin: auto 7rem auto 7rem;
 }
 
 .callout__heading {
   color: #fff;
   margin-top: 0;
   font-size: 3rem;
+  padding-top: 3rem;
 }
-.callout__grid--1x2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+
 .callout .btn {
   justify-self: center;
   align-self: center;
-  margin-left: 5rem;
 }
 
 .callout__content {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .callout__grid--1x2 {
-    grid-template-columns: 1fr auto;
-  }
-
   .callout__content {
     text-align: left;
+    padding-left: 1.5rem;
   }
   .callout.btn {
     justify-self: start;
     margin: 0 2rem;
-  }
-  .callout__para {
-    text-align: left;
   }
 }
 
@@ -692,14 +688,17 @@ a {
   margin: 4rem auto;
   max-width: 670px; /* the input filed will not grow more tham 670px in width*/
 }
-.grid__prices {
+
+.block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-weight: 600;
   font-size: 2rem;
   justify-items: center;
-  max-width: 700px; /* the list will not grow more than 70px in width*/
+  max-width: 700px;
+  margin: 0 auto; /* the list will not grow more than 70px in width*/
 }
 @media screen and (min-width: 768px) {
   .block-domain__prices {
@@ -721,7 +720,7 @@ a {
 /* Feature Block*/
 .feature {
   gap: 4rem 2rem;
-  margin: 3rem 0;
+  margin: 12rem 0;
 }
 .feature__heading {
   margin: 1rem 0;
@@ -730,12 +729,11 @@ a {
   width: 100%;
 }
 .feature:first-of-type {
-  margin-top: 1.5rem;
+  margin-top: 6rem;
 }
 
 @media screen and (min-width: 768px) {
-  .feature:nth-of-type(even),
-  .feature__content {
+  .feature:nth-of-type(even) .feature__content {
     order: 2;
   }
 }
